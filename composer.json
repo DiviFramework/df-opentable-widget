@@ -1,0 +1,20 @@
+{
+    "name": "diviframework/df-opentable-widget",
+    "description": "Divi module for Opentable Widget",
+    "type": "project",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Divi Framework",
+            "email": "support@diviframework.com"
+        }
+    ],
+    "require": {
+        "pimple/pimple": "~3.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "DF\\Opentable\\" : "src/"
+        }
+    }
+}
