@@ -1,6 +1,7 @@
 <?php
 namespace DF\Opentable;
 
+use ET_Builder_Element;
 use ET_Builder_Module;
 
 /**
@@ -57,6 +58,17 @@ class OpentableWidgetModule extends ET_Builder_Module
                 'button' => 'Button (210 x 106 pixels)',
             ),
             'default' => 'standard',
+        );
+
+        $this->fields['align'] = array(
+            'label' => 'Alignment',
+            'type' => 'select',
+            'options' => array(
+                'left' => 'Left',
+                'center' => 'Center',
+                'right' => 'Right',
+            ),
+            'default' => 'center',
         );
 
         $this->fields['iframe'] = array(
@@ -118,11 +130,20 @@ class OpentableWidgetModule extends ET_Builder_Module
             'type' => 'standard',
             'rid' => '',
             'iframe' => 'on',
+            'align' => 'center',
         );
 
         $atts = wp_parse_args($atts, $defaults);
 
         $atts['iframe'] = $atts['iframe'] == 'on' ? 'true' : 'false';
+
+        $module_class = $this->shortcode_atts['module_class'];
+        $module_class = ET_Builder_Element::add_module_order_class($module_class, $function_name);
+
+        ET_Builder_Element::set_style($module_class, array(
+            'selector' => 'div[id^="ot-widget-container"]',
+            'declaration' => "text-align:" . $atts['align'],
+        ));
 
         $script = sprintf(
             "<script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=%s&domain=com&type=%s&theme=%s&lang=%s&overlay=false&iframe=%s'></script>",
