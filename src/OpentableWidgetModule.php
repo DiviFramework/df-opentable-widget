@@ -145,6 +145,11 @@ class OpentableWidgetModule extends ET_Builder_Module
             'declaration' => "text-align:" . $atts['align'],
         ));
 
+        ET_Builder_Element::set_style($module_class, array(
+            'selector' => 'div[id^="ot-widget-container"] iframe',
+            'declaration' => "height:auto!important",
+        ));
+
         $script = sprintf(
             "<script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=%s&domain=com&type=%s&theme=%s&lang=%s&overlay=false&iframe=%s'></script>",
             $atts['rid'],
