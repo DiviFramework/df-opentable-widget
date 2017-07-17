@@ -144,6 +144,26 @@ class OpentableWidgetModule extends ET_Builder_Module
             'selector' => 'div[id^="ot-widget-container"]',
             'declaration' => "text-align:" . $atts['align'],
         ));
+        
+        ET_Builder_Element::set_style($module_class, array(
+            'selector' => 'div[id^="ot-reservation-widget"]',
+            'declaration' => 'display:inline-block !important',
+        ));
+
+        ET_Builder_Element::set_style($module_class, array(
+            'selector' => '.picker__table thead th',
+            'declaration' => 'padding: 0 0 8px 0;',
+        ));
+
+        ET_Builder_Element::set_style($module_class, array(
+            'selector' => '.picker__table tbody td',
+            'declaration' => 'padding: 1px 0;',
+        ));
+
+        ET_Builder_Element::set_style($module_class, array(
+            'selector' => '.picker__table',
+            'declaration' => 'border:none !important ;',
+        ));
 
         ET_Builder_Element::set_style($module_class, array(
             'selector' => 'div[id^="ot-widget-container"] iframe',
