@@ -7,7 +7,7 @@
  * Author URI:      https://www.diviframework.com
  * Text Domain:     df-opentable-widget
  * Domain Path:     /languages
- * Version:         1.0.1
+ * Version:         1.0.2
  *
  * @package
  */
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('DF_OPENTABLE_VERSION', '1.0.1');
+define('DF_OPENTABLE_VERSION', '1.0.2');
 define('DF_OPENTABLE_DIR', __DIR__);
 define('DF_OPENTABLE_URL', plugins_url('/' . basename(__DIR__)));
 

@@ -165,10 +165,12 @@ class OpentableWidgetModule extends ET_Builder_Module
             'declaration' => 'border:none !important ;',
         ));
 
-        ET_Builder_Element::set_style($module_class, array(
-            'selector' => 'div[id^="ot-widget-container"] iframe',
-            'declaration' => "height:auto!important",
-        ));
+        // ET_Builder_Element::set_style($module_class, array(
+        //     'selector' => 'div[id^="ot-widget-container"] iframe',
+        //     'declaration' => "height:auto!important",
+        // ));
+
+        $this->wp_add_inline_style();
 
         $script = sprintf(
             "<script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=%s&domain=com&type=%s&theme=%s&lang=%s&overlay=false&iframe=%s'></script>",
@@ -179,6 +181,75 @@ class OpentableWidgetModule extends ET_Builder_Module
             $atts['iframe']
         );
 
-        return $script;
+        $iframe_on_off = $atts['iframe'] == 'true' ? 'on' : 'off';
+        return sprintf('<div class="df-opentable type-%s iframe-%s">', $atts['type'], $iframe_on_off).  $script . '</div>';
+    }
+
+    protected function wp_add_inline_style()
+    {
+
+        // iframe-off + wide
+        $style = '.df-opentable.type-wide.iframe-off input[type="submit"] {
+                width:25% !important ;
+        }';
+
+        $style .= '.df-opentable.type-wide.iframe-off .ot-time-picker.ot-dtp-picker-selector {
+                width:25% !important ;
+        }';
+
+        $style .= '.df-opentable.type-wide.iframe-off .ot-date-picker.ot-dtp-picker-selector.wide {
+                width:25% !important ;
+        }';
+
+        $style .= '.df-opentable.type-wide.iframe-off .ot-party-size-picker {
+                width:25% !important ;
+        }';
+
+        $style .= '.df-opentable.type-wide.iframe-off table.picker__table {
+                text-align:center;
+        }';
+
+        $style .= '.df-opentable.type-wide.iframe-off table.picker__table td[role="presentation"] {
+                border-top:none !important;        
+        }';
+
+
+        // iframe-off tally
+        $style .= '.df-opentable.type-tall.iframe-off .ot-dtp-picker.tall .picker__holder {
+                width:100% !important;
+        }';
+
+        $style .= '.df-opentable.type-tall.iframe-off table.picker__table td[role="presentation"] {
+                border-top:none !important;        
+        }';
+
+        $style .= '.df-opentable.type-tall.iframe-off table.picker__table {
+                text-align:center;
+        }';
+
+        $style .= '.df-opentable.type-tall.iframe-off  .picker__nav--next{
+                right:20px;
+        }';
+
+
+        //iframe off , standard
+
+        $style .= '.df-opentable.type-standard.iframe-off table.picker__table td[role="presentation"] {
+                border-top:none !important;        
+        }';
+
+        $style .= '.df-opentable.type-standard.iframe-off table.picker__table {
+                text-align:center;
+        }';
+
+        $style .= '.df-opentable.type-standard.iframe-off  .picker__nav--next{
+                right:20px;
+        }';
+
+
+        wp_register_style('df-opentable-dummy-handle', false);
+        wp_enqueue_style('df-opentable-dummy-handle');
+
+        wp_add_inline_style('df-opentable-dummy-handle', $style);
     }
 }
