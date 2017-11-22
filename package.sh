@@ -12,7 +12,7 @@ cp -r $plugin_basename /tmp;
 cd -;
 cd /tmp;
 
-zip -r9 $plugin_basename-$version.zip $plugin_basename -x *.git* -x *.sh -x *.json -x *.lock -x Gruntfile.js;
+zip -r9 $plugin_basename-$version.zip $plugin_basename -x *.git* -x *.sh -x *.json -x *.lock -x Gruntfile.js -x *.xml -x *.dist -x *tests* -x *bin*;
 rm -rf /tmp/$plugin_basename;
 
 #upload to s3.
