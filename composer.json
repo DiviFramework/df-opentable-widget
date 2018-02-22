@@ -9,8 +9,15 @@
             "email": "support@diviframework.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/DiviFramework/update-checker"
+        }
+    ],
     "require": {
-        "pimple/pimple": "~3.0"
+        "pimple/pimple": "~3.0",
+        "diviframework/update-checker" : "dev-master"
     },
     "autoload" : {
         "psr-4" : {

@@ -4,20 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbceb458cf5a1c5c12a432b1ff42494b",
+    "content-hash": "e50e7e84cc1b648a4691498756233d31",
     "packages": [
         {
-            "name": "pimple/pimple",
-            "version": "v3.1.0",
+            "name": "diviframework/update-checker",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "279b56046fb368deacf77e2f8f3bdcea45cc367a"
+                "url": "https://github.com/DiviFramework/update-checker.git",
+                "reference": "5431f4ce3dc4cb0e27ad3248d3dd49b98f90ca5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/279b56046fb368deacf77e2f8f3bdcea45cc367a",
-                "reference": "279b56046fb368deacf77e2f8f3bdcea45cc367a",
+                "url": "https://api.github.com/repos/DiviFramework/update-checker/zipball/5431f4ce3dc4cb0e27ad3248d3dd49b98f90ca5d",
+                "reference": "5431f4ce3dc4cb0e27ad3248d3dd49b98f90ca5d",
+                "shasum": ""
+            },
+            "require": {
+                "yahnis-elsts/plugin-update-checker": "^4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DiviFramework\\UpdateChecker\\": "src/"
+                }
+            },
+            "license": [
+                "GPL2"
+            ],
+            "authors": [
+                {
+                    "name": "Ketan Shah",
+                    "email": "ketan.shah@gmail.com"
+                }
+            ],
+            "description": "WordPress plugin/theme update checker library by diviframework",
+            "support": {
+                "source": "https://github.com/DiviFramework/update-checker/tree/master",
+                "issues": "https://github.com/DiviFramework/update-checker/issues"
+            },
+            "time": "2018-02-22T05:22:47+00:00"
+        },
+        {
+            "name": "pimple/pimple",
+            "version": "v3.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/9e403941ef9d65d20cba7d54e29fe906db42cf32",
+                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +69,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.2.x-dev"
                 }
             },
             "autoload": {
@@ -54,7 +93,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2017-07-03T14:06:46+00:00"
+            "time": "2018-01-21T07:42:36+00:00"
         },
         {
             "name": "psr/container",
@@ -104,12 +143,59 @@
                 "psr"
             ],
             "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
+            "name": "yahnis-elsts/plugin-update-checker",
+            "version": "v4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
+                "reference": "da4286343601e1f5c01836e1d51e1c57cedb0f6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/da4286343601e1f5c01836e1d51e1c57cedb0f6d",
+                "reference": "da4286343601e1f5c01836e1d51e1c57cedb0f6d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "plugin-update-checker.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yahnis Elsts",
+                    "email": "whiteshadow@w-shadow.com",
+                    "homepage": "http://w-shadow.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A custom update checker for WordPress plugins and themes. Useful if you can't host your plugin in the official WP repository but still want it to support automatic updates.",
+            "homepage": "https://github.com/YahnisElsts/plugin-update-checker/",
+            "keywords": [
+                "automatic updates",
+                "plugin updates",
+                "theme updates",
+                "wordpress"
+            ],
+            "time": "2017-12-22T10:39:11+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "diviframework/update-checker": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

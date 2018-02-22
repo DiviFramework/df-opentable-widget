@@ -1,0 +1,3 @@
+[submodule "vendor/diviframework/update-checker"]
+	path = vendor/diviframework/update-checker
+	url = https://github.com/DiviFramework/update-checker.git

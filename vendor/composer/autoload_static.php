@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
 {
+    public static $files = array (
+        '89ff252b349d4d088742a09c25f5dd74' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/plugin-update-checker.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
@@ -13,6 +17,7 @@ class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
         ),
         'D' => 
         array (
+            'DiviFramework\\UpdateChecker\\' => 28,
             'DF\\Opentable\\' => 13,
         ),
     );
@@ -21,6 +26,10 @@ class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'DiviFramework\\UpdateChecker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/diviframework/update-checker/src',
         ),
         'DF\\Opentable\\' => 
         array (
@@ -38,36 +47,12 @@ class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
         ),
     );
 
-    public static $classMap = array (
-        'DF\\Opentable\\Activation' => __DIR__ . '/../..' . '/src/Activation.php',
-        'DF\\Opentable\\Container' => __DIR__ . '/../..' . '/src/Container.php',
-        'DF\\Opentable\\DiviModules' => __DIR__ . '/../..' . '/src/DiviModules.php',
-        'DF\\Opentable\\OpentableWidgetModule' => __DIR__ . '/../..' . '/src/OpentableWidgetModule.php',
-        'DF\\Opentable\\Themes' => __DIR__ . '/../..' . '/src/Themes.php',
-        'Pimple\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Container.php',
-        'Pimple\\Exception\\ExpectedInvokableException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/ExpectedInvokableException.php',
-        'Pimple\\Exception\\FrozenServiceException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/FrozenServiceException.php',
-        'Pimple\\Exception\\InvalidServiceIdentifierException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/InvalidServiceIdentifierException.php',
-        'Pimple\\Exception\\UnknownIdentifierException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/UnknownIdentifierException.php',
-        'Pimple\\ServiceProviderInterface' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/ServiceProviderInterface.php',
-        'Pimple\\Tests\\Fixtures\\Invokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Invokable.php',
-        'Pimple\\Tests\\Fixtures\\NonInvokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/NonInvokable.php',
-        'Pimple\\Tests\\Fixtures\\PimpleServiceProvider' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/PimpleServiceProvider.php',
-        'Pimple\\Tests\\Fixtures\\Service' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Service.php',
-        'Pimple\\Tests\\PimpleServiceProviderInterfaceTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleServiceProviderInterfaceTest.php',
-        'Pimple\\Tests\\PimpleTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleTest.php',
-        'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
-        'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
-        'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$classMap;
 
         }, null, ClassLoader::class);
     }
