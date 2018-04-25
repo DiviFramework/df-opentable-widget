@@ -156,18 +156,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/DiviFramework/update-checker.git",
-            "reference": "5431f4ce3dc4cb0e27ad3248d3dd49b98f90ca5d"
+            "reference": "a97c3050f3f23a61cc838467e8e00ec5d3881a17"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/DiviFramework/update-checker/zipball/5431f4ce3dc4cb0e27ad3248d3dd49b98f90ca5d",
-            "reference": "5431f4ce3dc4cb0e27ad3248d3dd49b98f90ca5d",
+            "url": "https://api.github.com/repos/DiviFramework/update-checker/zipball/a97c3050f3f23a61cc838467e8e00ec5d3881a17",
+            "reference": "a97c3050f3f23a61cc838467e8e00ec5d3881a17",
             "shasum": ""
         },
         "require": {
             "yahnis-elsts/plugin-update-checker": "^4.4"
         },
-        "time": "2018-02-22T05:22:47+00:00",
+        "time": "2018-03-14T09:31:19+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
