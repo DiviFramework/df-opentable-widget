@@ -45,6 +45,7 @@ class Container extends PimpleContainer {
 		$this['license']->init(); // license init in plugin run.
 		// divi module register.
 		add_action('et_builder_ready', array($this['divi_modules'], 'register'), 1);
+		add_action( 'divi_extensions_init', [$this['divi_modules'], 'register_extensions'] );
 
 		// check for dependancies
 		add_action('plugins_loaded', array($this['themes'], 'checkDependancies'));

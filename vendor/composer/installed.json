@@ -1,54 +1,44 @@
 [
     {
-        "name": "psr/container",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "name": "diviframework/update-checker",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/php-fig/container.git",
-            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            "url": "https://github.com/DiviFramework/update-checker.git",
+            "reference": "499f585b7ea06a935ddd31a20f0fd23c804709d3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "url": "https://api.github.com/repos/DiviFramework/update-checker/zipball/499f585b7ea06a935ddd31a20f0fd23c804709d3",
+            "reference": "499f585b7ea06a935ddd31a20f0fd23c804709d3",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.0"
+            "yahnis-elsts/plugin-update-checker": "^4.4"
         },
-        "time": "2017-02-14T16:28:37+00:00",
+        "time": "2018-05-02T03:50:47+00:00",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
-                "Psr\\Container\\": "src/"
+                "DiviFramework\\UpdateChecker\\": "src/"
             }
         },
-        "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "MIT"
+            "GPL2"
         ],
         "authors": [
             {
-                "name": "PHP-FIG",
-                "homepage": "http://www.php-fig.org/"
+                "name": "Ketan Shah",
+                "email": "ketan.shah@gmail.com"
             }
         ],
-        "description": "Common Container Interface (PHP FIG PSR-11)",
-        "homepage": "https://github.com/php-fig/container",
-        "keywords": [
-            "PSR-11",
-            "container",
-            "container-interface",
-            "container-interop",
-            "psr"
-        ]
+        "description": "WordPress plugin/theme update checker library by diviframework",
+        "support": {
+            "source": "https://github.com/DiviFramework/update-checker/tree/master",
+            "issues": "https://github.com/DiviFramework/update-checker/issues"
+        }
     },
     {
         "name": "pimple/pimple",
@@ -103,6 +93,57 @@
         ]
     },
     {
+        "name": "psr/container",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/container.git",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-02-14T16:28:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Container\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common Container Interface (PHP FIG PSR-11)",
+        "homepage": "https://github.com/php-fig/container",
+        "keywords": [
+            "PSR-11",
+            "container",
+            "container-interface",
+            "container-interop",
+            "psr"
+        ]
+    },
+    {
         "name": "yahnis-elsts/plugin-update-checker",
         "version": "v4.4",
         "version_normalized": "4.4.0.0",
@@ -148,46 +189,5 @@
             "theme updates",
             "wordpress"
         ]
-    },
-    {
-        "name": "diviframework/update-checker",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/DiviFramework/update-checker.git",
-            "reference": "a97c3050f3f23a61cc838467e8e00ec5d3881a17"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/DiviFramework/update-checker/zipball/a97c3050f3f23a61cc838467e8e00ec5d3881a17",
-            "reference": "a97c3050f3f23a61cc838467e8e00ec5d3881a17",
-            "shasum": ""
-        },
-        "require": {
-            "yahnis-elsts/plugin-update-checker": "^4.4"
-        },
-        "time": "2018-03-14T09:31:19+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "DiviFramework\\UpdateChecker\\": "src/"
-            }
-        },
-        "license": [
-            "GPL2"
-        ],
-        "authors": [
-            {
-                "name": "Ketan Shah",
-                "email": "ketan.shah@gmail.com"
-            }
-        ],
-        "description": "WordPress plugin/theme update checker library by diviframework",
-        "support": {
-            "source": "https://github.com/DiviFramework/update-checker/tree/master",
-            "issues": "https://github.com/DiviFramework/update-checker/issues"
-        }
     }
 ]

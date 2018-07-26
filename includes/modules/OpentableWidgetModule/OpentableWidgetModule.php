@@ -1,5 +1,5 @@
 <?php
-namespace DF\Opentable;
+namespace Opentable_Divi_Modules\OpentableWidgetModule;
 
 use ET_Builder_Element;
 use ET_Builder_Module;
@@ -13,6 +13,14 @@ class OpentableWidgetModule extends ET_Builder_Module
     public $slug = 'df_opentable_widget';
     public $fields;
     protected $container;
+    public $vb_support = 'on';
+
+    protected $module_credits = array(
+        'module_uri' => 'https://www.diviframework.com',
+        'author'     => 'Divi Framework',
+        'author_uri' => 'https://www.diviframework.com',
+    );
+
 
     public function __construct($container)
     {
@@ -190,60 +198,60 @@ class OpentableWidgetModule extends ET_Builder_Module
 
         // iframe-off + wide
         $style = '.df-opentable.type-wide.iframe-off input[type="submit"] {
-                width:25% !important ;
+            width:25% !important ;
         }';
 
         $style .= '.df-opentable.type-wide.iframe-off .ot-time-picker.ot-dtp-picker-selector {
-                width:25% !important ;
+            width:25% !important ;
         }';
 
         $style .= '.df-opentable.type-wide.iframe-off .ot-date-picker.ot-dtp-picker-selector.wide {
-                width:25% !important ;
+            width:25% !important ;
         }';
 
         $style .= '.df-opentable.type-wide.iframe-off .ot-party-size-picker {
-                width:25% !important ;
+            width:25% !important ;
         }';
 
         $style .= '.df-opentable.type-wide.iframe-off table.picker__table {
-                text-align:center;
+            text-align:center;
         }';
 
         $style .= '.df-opentable.type-wide.iframe-off table.picker__table td[role="presentation"] {
-                border-top:none !important;        
+            border-top:none !important;        
         }';
 
 
         // iframe-off tally
         $style .= '.df-opentable.type-tall.iframe-off .ot-dtp-picker.tall .picker__holder {
-                width:100% !important;
+            width:100% !important;
         }';
 
         $style .= '.df-opentable.type-tall.iframe-off table.picker__table td[role="presentation"] {
-                border-top:none !important;        
+            border-top:none !important;        
         }';
 
         $style .= '.df-opentable.type-tall.iframe-off table.picker__table {
-                text-align:center;
+            text-align:center;
         }';
 
         $style .= '.df-opentable.type-tall.iframe-off  .picker__nav--next{
-                right:20px;
+            right:20px;
         }';
 
 
         //iframe off , standard
 
         $style .= '.df-opentable.type-standard.iframe-off table.picker__table td[role="presentation"] {
-                border-top:none !important;        
+            border-top:none !important;        
         }';
 
         $style .= '.df-opentable.type-standard.iframe-off table.picker__table {
-                text-align:center;
+            text-align:center;
         }';
 
         $style .= '.df-opentable.type-standard.iframe-off  .picker__nav--next{
-                right:20px;
+            right:20px;
         }';
 
 

@@ -19,6 +19,10 @@ class DiviModules
      */
     public function register()
     {
-        new OpentableWidgetModule($this->container);
+        new \Opentable_Divi_Modules\OpentableWidgetModule\OpentableWidgetModule($this->container);
     }
+
+    public function register_extensions(){
+    new \Opentable_Divi_Modules\OpentableWidgetExtension($this->container);
+}
 }

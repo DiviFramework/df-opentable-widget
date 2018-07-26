@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "e50e7e84cc1b648a4691498756233d31",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DiviFramework/update-checker.git",
-                "reference": "a97c3050f3f23a61cc838467e8e00ec5d3881a17"
+                "reference": "499f585b7ea06a935ddd31a20f0fd23c804709d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DiviFramework/update-checker/zipball/a97c3050f3f23a61cc838467e8e00ec5d3881a17",
-                "reference": "a97c3050f3f23a61cc838467e8e00ec5d3881a17",
+                "url": "https://api.github.com/repos/DiviFramework/update-checker/zipball/499f585b7ea06a935ddd31a20f0fd23c804709d3",
+                "reference": "499f585b7ea06a935ddd31a20f0fd23c804709d3",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 "source": "https://github.com/DiviFramework/update-checker/tree/master",
                 "issues": "https://github.com/DiviFramework/update-checker/issues"
             },
-            "time": "2018-03-14T09:31:19+00:00"
+            "time": "2018-05-02T03:50:47+00:00"
         },
         {
             "name": "pimple/pimple",

@@ -21,7 +21,8 @@
     },
     "autoload" : {
         "psr-4" : {
-            "DF\\Opentable\\" : "src/"
+            "DF\\Opentable\\" : "src/",
+            "Opentable_Divi_Modules\\" : "includes/modules/"
         }
     }
 }
