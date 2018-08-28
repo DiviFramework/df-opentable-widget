@@ -23,6 +23,11 @@ class DiviModules
     }
 
     public function register_extensions(){
-    new \Opentable_Divi_Modules\OpentableWidgetExtension($this->container);
-}
+        new \Opentable_Divi_Modules\OpentableWidgetExtension($this->container);
+    }
+
+    public function wp_print_styles(){
+        // divi frontend builder styles. 
+        wp_dequeue_style( 'et_pb_df_opentable_widget-styles' );
+    }
 }

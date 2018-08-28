@@ -50,6 +50,9 @@ class Container extends PimpleContainer {
 		// check for dependancies
 		add_action('plugins_loaded', array($this['themes'], 'checkDependancies'));
 		add_action('admin_head', array($this, 'flushLocalStorage'));
+
+		// remove divi frontend builder styles since we don't want them.
+		add_action( 'wp_print_styles', [$this['divi_modules'], 'wp_print_styles'] );
 	}
 
 	/**
