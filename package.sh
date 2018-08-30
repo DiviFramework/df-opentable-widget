@@ -16,6 +16,6 @@ zip -r9 $plugin_basename-$version.zip $plugin_basename -x *.git* -x *.sh -x *.js
 rm -rf /tmp/$plugin_basename;
 
 #upload to s3.
-# rclone mkdir df-s3:diviframework/$plugin_basename;
-# rclone copy /tmp/$plugin_basename-$version.zip df-s3:diviframework/$plugin_basename;
-# echo "https://s3-ap-southeast-2.amazonaws.com/diviframework/$plugin_basename/$plugin_basename-$version.zip"
+rclone mkdir df-s3:diviframework/$plugin_basename;
+rclone copy /tmp/$plugin_basename-$version.zip df-s3:diviframework/$plugin_basename;
+echo "https://s3-ap-southeast-2.amazonaws.com/diviframework/$plugin_basename/$plugin_basename-$version.zip"
