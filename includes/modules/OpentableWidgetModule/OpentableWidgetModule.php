@@ -46,12 +46,15 @@ class OpentableWidgetModule extends ET_Builder_Module
             'label' => 'Language',
             'type' => 'select',
             'options' => array(
-                "en" => 'English',
-                "fr" => 'Français',
-                "es" => 'Español',
-                "de" => 'Deutsch',
-                "nl" => 'Nederlands',
-                "ja" => '日本語',
+                'en-US' => 'English-US',
+                'fr-CA' => 'Français-CA',
+                'de-DE' => 'Deutsch-DE',
+                'es-MX' => 'Español-MX',
+                'ja-JP' => '日本語-JP',
+                'nl-NL' => 'Nederlands-NL',
+                'it-IT' => 'Italiano-IT',
+
+
             ),
             'default' => 'en',
         );
@@ -134,7 +137,7 @@ class OpentableWidgetModule extends ET_Builder_Module
     public function shortcode_callback($atts, $content = null, $function_name)
     {
         $defaults = array(
-            'lang' => 'en',
+            'lang' => 'en-US',
             'type' => 'standard',
             'rid' => '',
             'iframe' => 'on',
@@ -142,6 +145,36 @@ class OpentableWidgetModule extends ET_Builder_Module
         );
 
         $atts = wp_parse_args($atts, $defaults);
+
+        switch ($atts['lang']) {
+            case "en":
+                $atts['lang'] = 'en-US';
+                break;
+                
+            case "fr":
+                $atts['lang'] = 'fr-CA';
+                break;
+                
+            case "es":
+                $atts['lang'] = 'Español-MX';
+                break;
+                
+            case "de":
+                $atts['lang'] = 'de-DE';
+                break;
+                
+            case "nl":
+                $atts['lang'] = 'Nederlands-NL';
+                break;
+                
+            case "ja":
+                $atts['lang'] = '日本語-JP';
+                break;
+
+            default:
+                # code...
+                break;
+        }
 
         $atts['iframe'] = $atts['iframe'] == 'on' ? 'true' : 'false';
 

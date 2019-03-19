@@ -15,6 +15,8 @@ rm /tmp/$plugin_basename/sftp-config.json;
 zip -r9 $plugin_basename-$version.zip $plugin_basename -x *.git* -x *.sh -x *.json -x *.xml -x *.dist -x *.lock -x *tests* -x *bin* -x *Gruntfile.js* -x *.gitignore* -x *.distignore* -x *.editorconf*;
 rm -rf /tmp/$plugin_basename;
 
+#448519
+
 #upload to s3.
 rclone mkdir df-s3:diviframework/$plugin_basename;
 rclone copy /tmp/$plugin_basename-$version.zip df-s3:diviframework/$plugin_basename;
