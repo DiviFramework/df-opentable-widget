@@ -1,6 +1,6 @@
-# OpenTable Divi Module - A WordPress plugin by [www.diviframework.com](https://www.diviframework.com/)
+# OpenTable Divi Module - [www.diviframework.com](https://www.diviframework.com/)
 
-Allow your customers to make reservations directly on your website using [OpenTable’s reservation widget](https://www.opentable.com/start/home).
+This WordPress plugin allows your customers to make reservations directly on your website using [OpenTable’s reservation widget](https://www.opentable.com/start/home).
 
 ## Features
 
