@@ -2,6 +2,8 @@
 
 This WordPress plugin allows your customers to make reservations directly on your website using [OpenTable’s reservation widget](https://www.opentable.com/start/home).
 
+> Note: Headsup! We have moved on other things & in spirit of GPL2 & WordPress ecosystem we have released the source code. We won't be developing or support this plugin. 
+
 ## Features
 
 * An OpenTable Divi Module to add reservation widget to your page
