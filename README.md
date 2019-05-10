@@ -11,7 +11,9 @@ This WordPress plugin allows your customers to make reservations directly on you
 * Ability to change the alignment
 * Divi frontend builder support
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4aPx8uUNNjc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![OpenTable Divi Module](https://img.youtube.com/vi/4aPx8uUNNjc/0.jpg "OpenTable Divi Module")](https://www.youtube.com/watch?v=4aPx8uUNNjc)
+
 
 ## OpenTable Divi Module
 
