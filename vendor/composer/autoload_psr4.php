@@ -8,6 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Opentable_Divi_Modules\\' => array($baseDir . '/includes/modules'),
-    'DiviFramework\\UpdateChecker\\' => array($vendorDir . '/diviframework/update-checker/src'),
     'DF\\Opentable\\' => array($baseDir . '/src'),
 );

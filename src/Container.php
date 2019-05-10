@@ -2,7 +2,6 @@
 namespace DF\Opentable;
 
 use Pimple\Container as PimpleContainer;
-use DiviFramework\UpdateChecker\PluginLicense;
 
 /**
  * DI Container.
@@ -45,11 +44,6 @@ class Container extends PimpleContainer
         $this['themes'] = function ($container) {
             return new Themes($container);
         };
-
-        $this['license'] = function ($container) {
-            return new PluginLicense($container, 'https://www.diviframework.com');
-        };
-
     }
 
     /**
@@ -57,12 +51,11 @@ class Container extends PimpleContainer
      */
     public function run()
     {
-        $this['license']->init(); // license init in plugin run.
         // divi module register.
         add_action('et_builder_ready', [$this['divi_modules'], 'register'], 1);
         add_action('divi_extensions_init', [$this['divi_modules'], 'register_extensions']);
 
-        // check for dependancies
+        // check for dependencies
         add_action('plugins_loaded', [$this['themes'], 'checkDependancies']);
         add_action('admin_head', [$this, 'flushLocalStorage']);
 

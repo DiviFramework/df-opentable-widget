@@ -6,10 +6,6 @@ namespace Composer\Autoload;
 
 class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
 {
-    public static $files = array (
-        '89ff252b349d4d088742a09c25f5dd74' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/plugin-update-checker.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
@@ -21,7 +17,6 @@ class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
         ),
         'D' => 
         array (
-            'DiviFramework\\UpdateChecker\\' => 28,
             'DF\\Opentable\\' => 13,
         ),
     );
@@ -34,10 +29,6 @@ class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
         'Opentable_Divi_Modules\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes/modules',
-        ),
-        'DiviFramework\\UpdateChecker\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/diviframework/update-checker/src',
         ),
         'DF\\Opentable\\' => 
         array (
@@ -55,44 +46,12 @@ class ComposerStaticInita5be735a4efdd8f68df20af01d61ef89
         ),
     );
 
-    public static $classMap = array (
-        'DF\\Opentable\\Activation' => __DIR__ . '/../..' . '/src/Activation.php',
-        'DF\\Opentable\\Container' => __DIR__ . '/../..' . '/src/Container.php',
-        'DF\\Opentable\\DiviModules' => __DIR__ . '/../..' . '/src/DiviModules.php',
-        'DF\\Opentable\\Themes' => __DIR__ . '/../..' . '/src/Themes.php',
-        'DiviFramework\\UpdateChecker\\PluginLicense' => __DIR__ . '/..' . '/diviframework/update-checker/src/PluginLicense.php',
-        'Opentable_Divi_Modules\\OpenTableWidgetExtension' => __DIR__ . '/../..' . '/includes/modules/OpentableWidgetExtension.php',
-        'Opentable_Divi_Modules\\OpentableWidgetModule\\OpentableWidgetModule' => __DIR__ . '/../..' . '/includes/modules/OpentableWidgetModule/OpentableWidgetModule.php',
-        'Pimple\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Container.php',
-        'Pimple\\Exception\\ExpectedInvokableException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/ExpectedInvokableException.php',
-        'Pimple\\Exception\\FrozenServiceException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/FrozenServiceException.php',
-        'Pimple\\Exception\\InvalidServiceIdentifierException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/InvalidServiceIdentifierException.php',
-        'Pimple\\Exception\\UnknownIdentifierException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/UnknownIdentifierException.php',
-        'Pimple\\Psr11\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Psr11/Container.php',
-        'Pimple\\Psr11\\ServiceLocator' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Psr11/ServiceLocator.php',
-        'Pimple\\ServiceIterator' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/ServiceIterator.php',
-        'Pimple\\ServiceProviderInterface' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/ServiceProviderInterface.php',
-        'Pimple\\Tests\\Fixtures\\Invokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Invokable.php',
-        'Pimple\\Tests\\Fixtures\\NonInvokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/NonInvokable.php',
-        'Pimple\\Tests\\Fixtures\\PimpleServiceProvider' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/PimpleServiceProvider.php',
-        'Pimple\\Tests\\Fixtures\\Service' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Service.php',
-        'Pimple\\Tests\\PimpleServiceProviderInterfaceTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleServiceProviderInterfaceTest.php',
-        'Pimple\\Tests\\PimpleTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleTest.php',
-        'Pimple\\Tests\\Psr11\\ContainerTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Psr11/ContainerTest.php',
-        'Pimple\\Tests\\Psr11\\ServiceLocatorTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Psr11/ServiceLocatorTest.php',
-        'Pimple\\Tests\\ServiceIteratorTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/ServiceIteratorTest.php',
-        'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
-        'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
-        'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInita5be735a4efdd8f68df20af01d61ef89::$classMap;
 
         }, null, ClassLoader::class);
     }
